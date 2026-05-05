@@ -1,0 +1,1 @@
+Timestamp,Elapsed_s,Temperature_C,Pressure_Pa,AirSpeed_mps,Lift_g,Drag_g,Density_kgm3,DynamicPressure_Pa,ReynoldsNumber,DynamicRange_mps,CL,CD,CLCD_Ratio
