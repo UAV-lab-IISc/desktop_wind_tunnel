@@ -1,0 +1,351 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║              WIND TUNNEL SINGLE-ANGLE ANALYZER - QUICK START                 ║
+║                                                                              ║
+║                  Generate Professional Analysis Graphs in Minutes            ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+📦 WHAT YOU HAVE:
+═════════════════════════════════════════════════════════════════════════════
+
+✅ wind_tunnel_analyzer.py    - Main Python script (400 lines)
+✅ WIND_TUNNEL_README.md      - Complete documentation
+✅ This file                  - Quick start guide
+
+
+🚀 SETUP IN 2 STEPS:
+═════════════════════════════════════════════════════════════════════════════
+
+STEP 1: Install Python Libraries (1 minute)
+──────────────────────────────────────────────────────────────────────────
+$ pip install pandas numpy matplotlib
+
+
+STEP 2: Edit 2 Lines at Top of wind_tunnel_analyzer.py (1 minute)
+──────────────────────────────────────────────────────────────────────────
+
+Open file and find (around line 27-30):
+
+    # ===== WIND TUNNEL CONFIGURATION - CHANGE THESE VALUES =====
+    ANGLE_OF_ATTACK = 0              # ← CHANGE THIS
+    CSV_FILE = "0D.csv"              # ← CHANGE THIS
+
+Change to your angle and file:
+
+    ANGLE_OF_ATTACK = 0              # Examples: -20, -10, 0, 20, 25
+    CSV_FILE = "0D.csv"              # Your CSV filename
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+⚡ RUN ANALYSIS (1 minute execution):
+═════════════════════════════════════════════════════════════════════════════
+
+$ python wind_tunnel_analyzer.py
+
+Output:
+  ✓ Data loaded successfully
+  ✓ Generating analysis figure
+  ✓ Figure saved: wind_tunnel_output/wind_tunnel_analysis_0deg.png
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+📊 WHAT YOU GET:
+═════════════════════════════════════════════════════════════════════════════
+
+One comprehensive figure with:
+
+1️⃣  CL Distribution Histogram
+    - Shows lift coefficient spread
+    - Mean and median marked
+    - AOA clearly labeled
+
+2️⃣  CD Distribution Histogram
+    - Shows drag coefficient spread
+    - Mean and median marked
+    - AOA clearly labeled
+
+3️⃣  Lift vs Drag Scatter Plot
+    - Relationship between CL and CD
+    - Color-coded by CL value
+    - Mean point highlighted
+    - AOA in title
+
+4️⃣  L/D Ratio Distribution
+    - Efficiency metric histogram
+    - Critical performance indicator
+    - AOA clearly shown
+
+5️⃣  CL & CD Over Time
+    - Blue line = CL trend
+    - Orange line = CD trend
+    - Full width graph showing stability
+    - AOA in title
+
+PLUS: Complete statistics table below all graphs
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+💡 HOW TO CHANGE ANGLE:
+═════════════════════════════════════════════════════════════════════════════
+
+It's just changing TWO numbers at the top of the file!
+
+FOR 0° ANGLE:
+    ANGLE_OF_ATTACK = 0
+    CSV_FILE = "0D.csv"
+
+FOR -20° ANGLE:
+    ANGLE_OF_ATTACK = -20
+    CSV_FILE = "-20D.csv"
+
+FOR +25° ANGLE:
+    ANGLE_OF_ATTACK = 25
+    CSV_FILE = "_25D.csv"
+
+Then just run: python wind_tunnel_analyzer.py
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+✨ KEY FEATURE: ANGLE DISPLAY
+═════════════════════════════════════════════════════════════════════════════
+
+The angle you set automatically appears EVERYWHERE:
+
+✓ Main title: "Wind Tunnel Analysis - Angle of Attack: 0°"
+✓ All graph titles: "CL Distribution (AOA: 0°)"
+✓ Output filename: "wind_tunnel_analysis_0deg.png"
+✓ Statistics header: "Angle of Attack: 0°"
+
+NO CONFUSION - The angle is crystal clear on every part!
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+📋 FILE REQUIREMENTS:
+═════════════════════════════════════════════════════════════════════════════
+
+Your CSV file must have these columns:
+
+Required Columns:
+  ✓ CL (Lift coefficient)
+  ✓ CD (Drag coefficient)
+  ✓ Elapsed_s (Time in seconds)
+  ✓ Temperature_C
+  ✓ Pressure_Pa
+  ✓ AirSpeed_mps
+  ✓ ReynoldsNumber
+  ✓ Lift_g (Lift in grams)
+  ✓ Drag_g (Drag in grams)
+
+Your file can have extra columns - they'll be ignored.
+Missing columns will cause an error - check the error message.
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+🎯 COMPLETE WORKFLOW:
+═════════════════════════════════════════════════════════════════════════════
+
+1. Check your CSV file exists
+   $ ls -la 0D.csv
+
+2. Edit wind_tunnel_analyzer.py
+   ANGLE_OF_ATTACK = 0
+   CSV_FILE = "0D.csv"
+
+3. Run analysis
+   $ python wind_tunnel_analyzer.py
+
+4. Check output
+   $ ls wind_tunnel_output/
+   wind_tunnel_analysis_0deg.png
+
+5. Open the PNG file in any image viewer
+   ✓ You'll see all 5 graphs
+   ✓ Angle clearly labeled everywhere
+   ✓ Professional quality (300 DPI)
+   ✓ Ready for your report!
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+❓ COMMON QUESTIONS:
+═════════════════════════════════════════════════════════════════════════════
+
+Q: Do I need to change anything else?
+A: No! Just the two lines at the top. Everything else is automatic.
+
+Q: Will the angle appear on the graphs?
+A: YES! It appears on every graph title and the main figure title.
+
+Q: What if my angle is negative (like -20°)?
+A: Just use the negative number:
+   ANGLE_OF_ATTACK = -20
+   CSV_FILE = "-20D.csv"
+
+Q: Can I analyze all my angles at once?
+A: One at a time. Change the values and run again for each angle.
+
+Q: Where are the output files?
+A: In the "wind_tunnel_output" folder (auto-created).
+
+Q: Can I use this for a report?
+A: Yes! The PNG file is 300 DPI, professional quality.
+
+Q: What if I get an error?
+A: See WIND_TUNNEL_README.md troubleshooting section.
+
+Q: How long does it take?
+A: About 2-5 seconds per analysis.
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+🔧 INSTALLATION CHECK:
+═════════════════════════════════════════════════════════════════════════════
+
+Before running, verify you have Python and libraries:
+
+$ python --version
+# Should show Python 3.7 or higher
+
+$ python -c "import pandas; import numpy; import matplotlib"
+# Should run without errors
+
+If libraries missing, install:
+$ pip install pandas numpy matplotlib
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+📂 FILE ORGANIZATION:
+═════════════════════════════════════════════════════════════════════════════
+
+Your folder should look like:
+
+my_project/
+├── wind_tunnel_analyzer.py     ← Main script (this file)
+├── WIND_TUNNEL_README.md       ← Full documentation
+├── 0D.csv                      ← Your wind tunnel data
+├── -20D.csv                    ← Other angles
+├── 20D.csv
+└── wind_tunnel_output/         ← Auto-created for results
+    └── wind_tunnel_analysis_0deg.png
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+🎨 GRAPH LAYOUT:
+═════════════════════════════════════════════════════════════════════════════
+
+Top Left          │  Top Right
+CL Distribution   │  CD Distribution
+──────────────────┼──────────────────
+Middle Left       │  Middle Right
+Lift vs Drag      │  L/D Ratio
+──────────────────┼──────────────────
+Bottom (Full Width)
+CL & CD Over Time
+──────────────────
+Statistics Table
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+💾 OUTPUT STATISTICS:
+═════════════════════════════════════════════════════════════════════════════
+
+Your output PNG includes:
+
+• Data point count
+• CL: Mean, Median, Std Dev, Min, Max
+• CD: Mean, Median, Std Dev, Min, Max
+• Lift & Drag forces in grams
+• L/D ratio (efficiency)
+• Reynolds Number
+• Temperature, Pressure, Air Speed
+
+All clearly labeled with the angle you're analyzing!
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+⚡ QUICK COMMANDS:
+═════════════════════════════════════════════════════════════════════════════
+
+# Install dependencies
+pip install pandas numpy matplotlib
+
+# Check Python version
+python --version
+
+# Run analysis for 0°
+python wind_tunnel_analyzer.py
+
+# View all output files
+ls wind_tunnel_output/
+
+# Count files in output
+ls -1 wind_tunnel_output/ | wc -l
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+✅ READY TO START:
+═════════════════════════════════════════════════════════════════════════════
+
+1. Edit wind_tunnel_analyzer.py
+   Change lines 29-30:
+   ANGLE_OF_ATTACK = 0
+   CSV_FILE = "0D.csv"
+
+2. Run:
+   python wind_tunnel_analyzer.py
+
+3. Check:
+   wind_tunnel_output/wind_tunnel_analysis_0deg.png
+
+4. Repeat for other angles (just change the 2 lines!)
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+
+📖 FOR DETAILED HELP:
+
+Read: WIND_TUNNEL_README.md
+
+It has:
+✓ Complete installation guide
+✓ CSV file format details
+✓ Graph interpretation guide
+✓ Troubleshooting section
+✓ Tips for best results
+✓ Batch processing examples
+
+
+═════════════════════════════════════════════════════════════════════════════
+
+Version 1.0 | Created: 2026-04-26 | Status: Production Ready
+
+Happy analyzing! ✈️📊
+
+═════════════════════════════════════════════════════════════════════════════
